@@ -13,17 +13,37 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Mier's Blog
+email: mieraisan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is Mieraidihaimu Mieraisan (AKA `Mier`), a simple developer guy from Gulja, Xinjiang. 
+  A full on Chinese, however ethnically known as a mixed pf Uzbek and Uyghur (Long story short a Chinese Guy).
+  I was in love with the programming since the childhood. 
+  I have a solid Academic background in Information Technology, respectively BEc in 
+  Electronic Information Engineering and MSc in Multimedia. Seasoned skill in 
+  Software Engineering as well as outstanding problem solving skills, 
+  professional Agile work mindset assist me to confront future adventures. 
+  
+  My Career started among Finland (Scandinavia) Hi-Tech Start-Ups as a Software Engineer, 
+  building Efficient, Robust and Scalable Systems in various Platforms. 
+  I was involving with Intelligent Sports system, E-Commerce Fashion platform, 
+  Social Media networking Industries. 
+  
+  Then I move back to China, taking the role of Senior iOS Engineer in 
+  TOP Fortune Corporate PingAn to develop market leading 
+  Real-Estate / Fin-tech mobile solution in iOS platform. 
+  
+  Currently I join Farfetch Ltd (Leading Luxury Fashion E-Commerce) as a Senior Mobile Engineer, 
+  work on something amazing. 
+  
+  Specialties: Software Engineering, iOS Mobile Application Architecture, Machine Learning Algorithms, 
+  System Architecting, Video/Image Processing.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
+twitter_username: Mieraisan
+github_username:  mieraidihaimu
+linkedin_username: https://www.linkedin.com/in/mieraidihaimu-mieraisan-220b7732/
 # Build settings
 markdown: kramdown
 theme: minima
