@@ -1,0 +1,34 @@
+pygmentsCodeFences = true
+languageCode = "en-us"
+canonifyurls = true
+theme = "kiera"
+title = "Blog"
+
+copyright = "Copyright &copy; 2020 - Mieraidihaimu Mieraisan"
+
+disqusShortname = "Mier" #Disqus shortname
+googleAnalytics = "" #Google Analytics ID
+
+summaryLength = 6
+enableEmoji = true
+paginate = 10
+
+[author]
+    name = "Mieraidihaimu Mieraisan"           #Author name
+    github = "Mieraidihaimu"         #Github username
+    linkedin = "mier"       #LinkedIn username
+    twitter = "Mieraisan"        #Twitter username
+    instagram = "mieraisan"      #Instagram username
+
+[params]
+    recent_posts_number = 4
+    show_reading_time = true
+    tagline = "A simple start"
+    description = "Little sharing brain pieces"
+    customCSS = []  #Optional Customised CSS
+
+ [[menu.main]]
+   identifier = "tags"
+   name = "Tags"
+   url = ""
+   weight = 1
