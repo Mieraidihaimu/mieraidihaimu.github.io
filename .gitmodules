@@ -1,0 +1,9 @@
+[submodule "themes/zzo"]
+	path = themes/zzo
+	url = https://github.com/zzossig/hugo-theme-zzo.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "themes/kiera"]
+	path = themes/kiera
+	url = https://github.com/funkydan2/hugo-kiera.git
