@@ -1,0 +1,141 @@
+{
+  "milestones": [
+    {
+      "id": "bloomberg-core",
+      "year": "2023–present",
+      "company": "Bloomberg",
+      "role": "Senior Software Engineer",
+      "location": "London",
+      "summary": "I work on Instant Bloomberg’s messaging backend. Changes to Python Kafka consumers reduced message latency by 40% and improved throughput by 25% through batching, encoding and compression.",
+      "details": [
+        "Developed backend features for infrastructure supporting 200,000+ mobile daily active users with 99.99% uptime.",
+        "Built real-time user event synchronization with Redis and distributed messaging, and audio messaging APIs with compliance intervention.",
+        "Led the migration from physical to virtual clusters to improve deployment and scaling."
+      ],
+      "stack": "Python · Kafka · Redis · CPython"
+    },
+    {
+      "id": "cookpad-evolution",
+      "year": "2019–2023",
+      "company": "Cookpad",
+      "role": "Senior Software Engineer",
+      "location": "Bristol",
+      "summary": "Led iOS development, then moved into backend and data engineering in my final year. Built event pipelines and a recipe creation service that streamed responses to mobile clients.",
+      "details": [
+        "Worked on the iOS app for a recipe-sharing platform with a global audience; mentored four developers on APIs and client-server design.",
+        "Built cross-platform event ingestion and enrichment with Snowplow, dbt and Redshift.",
+        "Used Python, Flask and Server-Sent Events to display generated recipe content as it arrived, rather than waiting for a complete response."
+      ],
+      "stack": "Swift · Python · Flask · Snowplow · dbt · Redshift"
+    },
+    {
+      "id": "farfetch-gateway",
+      "year": "2018–2019",
+      "company": "Farfetch",
+      "role": "Senior Software Engineer",
+      "location": "Shanghai",
+      "summary": "Co-architected the API gateway and data localization strategy for the China market, reducing API and CDN timeout issues by 65% through infrastructure changes.",
+      "details": [
+        "Focused on the reliability of requests between clients in China and Farfetch’s services.",
+        "Worked across gateway routing and data localization to reduce cross-border network problems."
+      ],
+      "stack": "API gateways · Data localization · CDN"
+    },
+    {
+      "id": "pingan-shanghai",
+      "year": "2015–2018",
+      "company": "Ping An Group",
+      "role": "Senior iOS Engineer",
+      "location": "Shanghai",
+      "summary": "Built iOS applications for financial services, working within regulated systems and compliance requirements.",
+      "details": [],
+      "stack": "iOS · Financial services"
+    }
+  ],
+  "earlier": [
+    {
+      "id": "finland-early-career",
+      "year": "2013–2015",
+      "company": "Early work in Finland",
+      "summary": "Software Engineer at SIQ Basketball (Helsinki, Jan–Jun 2013) and Jerone Group Oy (Tampere, Nov 2013–Feb 2014), followed by iOS Developer at Nintu Oy (Helsinki, Feb 2014–Aug 2015)."
+    },
+    {
+      "id": "masters-thesis",
+      "year": "2013",
+      "company": "M.Sc. Information Technology · Tampere University of Technology",
+      "summary": "My thesis explored basketball video analysis using modified SURF for court detection and compressive tracking for individual players. It was an early lesson in working with noisy inputs and limited compute—ideas I still find useful in systems work.",
+      "link": "https://trepo.tuni.fi/handle/123456789/21916",
+      "linkLabel": "Read the thesis"
+    },
+    {
+      "id": "bachelors-opt",
+      "year": "2006–2010",
+      "company": "B.Sc. Information Technology · HUST",
+      "summary": "Studied at Huazhong University of Science and Technology in Wuhan, with work on multi-objective optimization and Pareto trade-offs."
+    }
+  ],
+  "projects": [
+    {
+      "id": "pagehum",
+      "name": "Pagehum",
+      "featured": true,
+      "category": "macOS & iOS",
+      "summary": "A reading app that turns saved articles into speech on your device. Built with SwiftUI, Kokoro and Apple MLX, with a Mac CLI for audio export.",
+      "url": "https://github.com/Mieraidihaimu/pagehum",
+      "linkLabel": "Source & setup"
+    },
+    {
+      "id": "typingpall",
+      "name": "TypingPall",
+      "featured": true,
+      "category": "macOS",
+      "summary": "Practice algorithms and code patterns one line at a time. A native, offline app with recall drills, a local practice library and no accounts or analytics.",
+      "url": "https://github.com/Mieraidihaimu/TypingPall",
+      "linkLabel": "Source & build instructions"
+    },
+    {
+      "id": "turkic-grid-games",
+      "name": "Türkic Grid Games",
+      "featured": true,
+      "category": "Web",
+      "summary": "Bağ and Qyrq Qyz, two Central Asian strategy games, with solo play, WebRTC multiplayer and procedural instrument sounds from the Web Audio API.",
+      "url": "https://turkic-grid-games.svmwb88w56-8b2.workers.dev/",
+      "linkLabel": "Play the games"
+    },
+    {
+      "id": "llm-monitor",
+      "name": "llm_monitor_daemon",
+      "featured": false,
+      "category": "Local tool",
+      "summary": "A C99/POSIX daemon that indexes local coding-agent session logs in SQLite."
+    },
+    {
+      "id": "pomodoro-menubar",
+      "name": "Pomodoro Menubar",
+      "featured": false,
+      "category": "Local tool",
+      "summary": "A small Swift timer that lives in the macOS menu bar and uses system notifications."
+    },
+    {
+      "id": "wander-explorer",
+      "name": "Wander",
+      "featured": false,
+      "summary": "A canvas for exploring connected ideas, backed by Cloudflare Workers and D1.",
+      "url": "https://wander-knowledge-explorer.svmwb88w56-8b2.workers.dev/"
+    },
+    {
+      "id": "home-model",
+      "name": "Home Model",
+      "featured": false,
+      "summary": "Machine-readable floor plans and furniture layout experiments with YAML, Workers AI and D1.",
+      "url": "https://home-model.svmwb88w56-8b2.workers.dev/"
+    },
+    {
+      "id": "til-feed",
+      "name": "Today I Learned",
+      "featured": false,
+      "summary": "A personal knowledge feed with a web app and CLI, running on Cloudflare Workers and D1.",
+      "url": "https://til-mier.svmwb88w56-8b2.workers.dev/"
+    }
+  ]
+}

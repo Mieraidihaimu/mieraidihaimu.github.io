@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mier — Software Engineer</title>
+  <meta name="description" content="Mieraidihaimu Mieraisan (Mier), senior software engineer at Bloomberg. Distributed systems, a background in iOS, and independent native software.">
+  <meta name="author" content="Mieraidihaimu Mieraisan">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Mier — Software Engineer">
+  <meta property="og:description" content="From native apps to distributed systems. Work, projects and a little background from Mieraidihaimu Mieraisan.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151718'/%3E%3Ctext x='13' y='46' font-family='Georgia' font-size='44' fill='%23dfb57c'%3Em%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about" aria-label="Mier, back to introduction">mier<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle-btn" type="button" aria-label="Switch to dark theme" hidden>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section id="about" class="hero" aria-labelledby="intro-title">
+      <p class="eyebrow">Mieraidihaimu Mieraisan · Mier</p>
+      <h1 id="intro-title">From native apps<br>to <em>distributed systems.</em></h1>
+      <div class="intro">
+        <p>I’m a senior software engineer at Bloomberg in London. I work on messaging infrastructure with Python, Kafka and Redis, after several years building iOS apps.</p>
+        <p>I care about how a system behaves all the way to the screen. Outside work, I build small native tools and explore local speech models.</p>
+      </div>
+      <div class="intro-links">
+        <a class="primary-link" href="CV_Mier.pdf">Read my CV <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/Mieraidihaimu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/mier/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <h2 id="experience-title">Experience</h2>
+        <p>From the client to the systems behind it.</p>
+      </div>
+      <!-- BEGIN EXPERIENCE -->
+      <article class="experience-item" id="bloomberg-core">
+        <p class="experience-date">2023–present</p>
+        <div>
+          <div class="job-heading"><h3>Bloomberg</h3><span class="location">London</span></div>
+          <p class="role">Senior Software Engineer</p>
+          <p class="job-summary">I work on Instant Bloomberg’s messaging backend. Changes to Python Kafka consumers reduced message latency by 40% and improved throughput by 25% through batching, encoding and compression.</p>
+          <details class="technical-details">
+          <summary>Technical details</summary>
+          <ul><li>Developed backend features for infrastructure supporting 200,000+ mobile daily active users with 99.99% uptime.</li><li>Built real-time user event synchronization with Redis and distributed messaging, and audio messaging APIs with compliance intervention.</li><li>Led the migration from physical to virtual clusters to improve deployment and scaling.</li></ul>
+          <p class="stack">Python · Kafka · Redis · CPython</p>
+        </details>
+        </div>
+      </article>
+      <article class="experience-item" id="cookpad-evolution">
+        <p class="experience-date">2019–2023</p>
+        <div>
+          <div class="job-heading"><h3>Cookpad</h3><span class="location">Bristol</span></div>
+          <p class="role">Senior Software Engineer</p>
+          <p class="job-summary">Led iOS development, then moved into backend and data engineering in my final year. Built event pipelines and a recipe creation service that streamed responses to mobile clients.</p>
+          <details class="technical-details">
+          <summary>Technical details</summary>
+          <ul><li>Worked on the iOS app for a recipe-sharing platform with a global audience; mentored four developers on APIs and client-server design.</li><li>Built cross-platform event ingestion and enrichment with Snowplow, dbt and Redshift.</li><li>Used Python, Flask and Server-Sent Events to display generated recipe content as it arrived, rather than waiting for a complete response.</li></ul>
+          <p class="stack">Swift · Python · Flask · Snowplow · dbt · Redshift</p>
+        </details>
+        </div>
+      </article>
+      <article class="experience-item" id="farfetch-gateway">
+        <p class="experience-date">2018–2019</p>
+        <div>
+          <div class="job-heading"><h3>Farfetch</h3><span class="location">Shanghai</span></div>
+          <p class="role">Senior Software Engineer</p>
+          <p class="job-summary">Co-architected the API gateway and data localization strategy for the China market, reducing API and CDN timeout issues by 65% through infrastructure changes.</p>
+          <details class="technical-details">
+          <summary>Technical details</summary>
+          <ul><li>Focused on the reliability of requests between clients in China and Farfetch’s services.</li><li>Worked across gateway routing and data localization to reduce cross-border network problems.</li></ul>
+          <p class="stack">API gateways · Data localization · CDN</p>
+        </details>
+        </div>
+      </article>
+      <article class="experience-item" id="pingan-shanghai">
+        <p class="experience-date">2015–2018</p>
+        <div>
+          <div class="job-heading"><h3>Ping An Group</h3><span class="location">Shanghai</span></div>
+          <p class="role">Senior iOS Engineer</p>
+          <p class="job-summary">Built iOS applications for financial services, working within regulated systems and compliance requirements.</p>
+          
+        </div>
+      </article>
+      <!-- END EXPERIENCE -->
+      <details class="earlier-work">
+        <summary>Earlier work &amp; education <span aria-hidden="true">+</span></summary>
+        <div class="earlier-content">
+          <!-- BEGIN EARLIER -->
+      <article class="earlier-item" id="finland-early-career">
+            <p class="experience-date">2013–2015</p>
+            <h3>Early work in Finland</h3>
+            <p>Software Engineer at SIQ Basketball (Helsinki, Jan–Jun 2013) and Jerone Group Oy (Tampere, Nov 2013–Feb 2014), followed by iOS Developer at Nintu Oy (Helsinki, Feb 2014–Aug 2015).</p>
+            
+          </article>
+          <article class="earlier-item" id="masters-thesis">
+            <p class="experience-date">2013</p>
+            <h3>M.Sc. Information Technology · Tampere University of Technology</h3>
+            <p>My thesis explored basketball video analysis using modified SURF for court detection and compressive tracking for individual players. It was an early lesson in working with noisy inputs and limited compute—ideas I still find useful in systems work.</p>
+            <a href="https://trepo.tuni.fi/handle/123456789/21916" class="thesis-link" target="_blank" rel="noopener noreferrer">Read the thesis <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="earlier-item" id="bachelors-opt">
+            <p class="experience-date">2006–2010</p>
+            <h3>B.Sc. Information Technology · HUST</h3>
+            <p>Studied at Huazhong University of Science and Technology in Wuhan, with work on multi-objective optimization and Pareto trade-offs.</p>
+            
+          </article>
+      <!-- END EARLIER -->
+        </div>
+      </details>
+    </section>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Things I build</h2>
+        <p>Independent projects, made out of curiosity.</p>
+      </div>
+      <div class="projects-grid">
+        <!-- BEGIN PROJECTS -->
+      <article class="project" id="project-pagehum">
+          <span class="project-category">macOS &amp; iOS</span>
+          <h3>Pagehum</h3>
+          <p>A reading app that turns saved articles into speech on your device. Built with SwiftUI, Kokoro and Apple MLX, with a Mac CLI for audio export.</p>
+          <a href="https://github.com/Mieraidihaimu/pagehum" class="" target="_blank" rel="noopener noreferrer">Source &amp; setup <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project" id="project-typingpall">
+          <span class="project-category">macOS</span>
+          <h3>TypingPall</h3>
+          <p>Practice algorithms and code patterns one line at a time. A native, offline app with recall drills, a local practice library and no accounts or analytics.</p>
+          <a href="https://github.com/Mieraidihaimu/TypingPall" class="" target="_blank" rel="noopener noreferrer">Source &amp; build instructions <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project" id="project-turkic-grid-games">
+          <span class="project-category">Web</span>
+          <h3>Türkic Grid Games</h3>
+          <p>Bağ and Qyrq Qyz, two Central Asian strategy games, with solo play, WebRTC multiplayer and procedural instrument sounds from the Web Audio API.</p>
+          <a href="https://turkic-grid-games.svmwb88w56-8b2.workers.dev/" class="" target="_blank" rel="noopener noreferrer">Play the games <span aria-hidden="true">↗</span></a>
+        </article>
+      <!-- END PROJECTS -->
+      </div>
+      <details class="more-projects">
+        <summary>A few more experiments <span aria-hidden="true">+</span></summary>
+        <ul class="experiment-list">
+          <!-- BEGIN EXPERIMENTS -->
+      <li id="project-llm-monitor"><div><strong>llm_monitor_daemon<span class="experiment-label">Local tool</span></strong></div><p>A C99/POSIX daemon that indexes local coding-agent session logs in SQLite.</p></li>
+          <li id="project-pomodoro-menubar"><div><strong>Pomodoro Menubar<span class="experiment-label">Local tool</span></strong></div><p>A small Swift timer that lives in the macOS menu bar and uses system notifications.</p></li>
+          <li id="project-wander-explorer"><div><a href="https://wander-knowledge-explorer.svmwb88w56-8b2.workers.dev/" class="" target="_blank" rel="noopener noreferrer">Wander <span aria-hidden="true">↗</span></a></div><p>A canvas for exploring connected ideas, backed by Cloudflare Workers and D1.</p></li>
+          <li id="project-home-model"><div><a href="https://home-model.svmwb88w56-8b2.workers.dev/" class="" target="_blank" rel="noopener noreferrer">Home Model <span aria-hidden="true">↗</span></a></div><p>Machine-readable floor plans and furniture layout experiments with YAML, Workers AI and D1.</p></li>
+          <li id="project-til-feed"><div><a href="https://til-mier.svmwb88w56-8b2.workers.dev/" class="" target="_blank" rel="noopener noreferrer">Today I Learned <span aria-hidden="true">↗</span></a></div><p>A personal knowledge feed with a web app and CLI, running on Cloudflare Workers and D1.</p></li>
+      <!-- END EXPERIMENTS -->
+        </ul>
+      </details>
+    </section>
+    <section id="contact" class="contact section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Say hello.</h2>
+      <p>Happy to talk about systems, native software, or something you’re building.</p>
+      <a class="email-link" href="mailto:mieraisan@gmail.com">mieraisan@gmail.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="container site-footer">
+    <span>© 2026 Mieraidihaimu Mieraisan</span>
+    <span>Plain HTML, CSS &amp; a little JavaScript.</span>
+  </footer>
+</body>
+</html>
