@@ -25,7 +25,7 @@ Review this static portfolio for accuracy, clarity and usability. Give specific 
 
 ## Reading experience
 
-Can a visitor quickly find the current role, previous work, three featured projects, CV and contact? Do the optional technical details add substance? Check for repetition, inflated language and unnecessary controls. Recommend further content only when it answers a useful visitor question.
+Can a visitor quickly find the current role, previous work, featured projects, CV and contact? Do the optional technical details add substance? Check for repetition, inflated language and unnecessary controls. Recommend further content only when it answers a useful visitor question.
 
 ## Implementation
 

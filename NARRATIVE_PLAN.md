@@ -7,7 +7,7 @@ The site should make it easy to understand Mier’s work, inspect a few details 
 1. A short introduction with role, focus, CV and profile links.
 2. Four concise career entries, with optional technical details for the recent roles.
 3. Earlier work and education in a disclosure. Include SIQ Basketball, Jerone Group Oy and Nintu Oy with the dates from the CV. Keep the computer vision thesis connection as a personal influence, rather than equating vision algorithms with Kafka ordering guarantees.
-4. Three selected projects: Pagehum, TypingPall and Türkic Grid Games. Keep the other five as short entries under “A few more experiments”.
+4. Feature Pagehum, TypingPall, Audio Capture, Vocal Coach, Teachably and Türkic Grid Games. Keep the other five as short entries under “A few more experiments”.
 5. An email contact.
 
 ## Evidence and wording

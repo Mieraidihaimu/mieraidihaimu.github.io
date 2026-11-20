@@ -96,6 +96,33 @@
       "linkLabel": "TypingPall source and setup"
     },
     {
+      "id": "audio-capture",
+      "name": "Audio Capture",
+      "featured": true,
+      "category": "macOS",
+      "summary": "Record audio from a Mac app or your entire system, with the option to save your microphone as a separate track. The menu bar app uses WhisperKit for offline transcription and dictation.",
+      "url": "https://github.com/Mieraidihaimu/audio-capture",
+      "linkLabel": "Audio Capture source and setup"
+    },
+    {
+      "id": "vocal-coach",
+      "name": "Vocal Coach",
+      "featured": true,
+      "category": "macOS",
+      "summary": "Practise British English vowels with a prompt of your choice. Hear the prompt in Pagehum’s Emma voice, record yourself, and compare takes with pitch traces and feedback on individual words.",
+      "url": "https://github.com/Mieraidihaimu/VocalCoach#vocal-coach",
+      "linkLabel": "Vocal Coach source and setup"
+    },
+    {
+      "id": "teachably",
+      "name": "Teachably",
+      "featured": true,
+      "category": "iOS",
+      "summary": "An iPhone app that suggests daily activities for parents and children based on the family’s interests. Each activity gives younger children a way to join in and older siblings a role in leading it.",
+      "url": "https://github.com/Mieraidihaimu/Teachably",
+      "linkLabel": "Teachably source and setup"
+    },
+    {
       "id": "turkic-grid-games",
       "name": "Türkic Grid Games",
       "featured": true,
