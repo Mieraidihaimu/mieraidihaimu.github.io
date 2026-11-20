@@ -24,4 +24,4 @@ The site should make it easy to understand Mier’s work, inspect a few details 
 
 `data/timeline.json` is the content source for experience, earlier work and projects. Run `python3 scripts/build.py` after editing it. The script updates the marked regions in `index.html`; edit the introduction, navigation and contact directly in that file.
 
-The output is static HTML and CSS with a small theme preference script. Native `details` disclosures work with JavaScript disabled and over `file://`. There are no content fetches, external fonts or runtime packages.
+The output uses static HTML and CSS. The layout uses a single column, system fonts and browser colors. Native `details` disclosures work over `file://`.

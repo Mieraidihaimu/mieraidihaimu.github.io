@@ -3,6 +3,7 @@ import json
 import re
 from html import escape
 from pathlib import Path
+from textwrap import indent
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -11,41 +12,34 @@ def text(value):
     return escape(value, quote=True)
 
 
-def link(url, label, class_name=""):
+def link(url, label):
     if not url.startswith("https://"):
         raise ValueError(f"Expected an HTTPS project or thesis URL: {url}")
-    style = f' class="{text(class_name)}"' if class_name else ""
-    return f'<a href="{text(url)}"{style}>{text(label)}</a>'
+    return f'<a href="{text(url)}">{text(label)}</a>'
 
 
 def experience(item):
-    details = ""
+    row = [
+        f'<article id="{text(item["id"])}">',
+        f'  <h3>{text(item["company"])}</h3>',
+        f'  <p class="entry-meta">{text(item["role"])} · {text(item["location"])} · {text(item["year"])}</p>',
+        f'  <p>{text(item["summary"])}</p>',
+    ]
     if item["details"]:
-        points = "".join(f'<li>{text(point)}</li>' for point in item["details"])
-        details = f'''
-          <details class="technical-details">
-          <summary>Technical details</summary>
-          <ul>{points}</ul>
-          <p class="stack">{text(item["stack"])}</p>
-        </details>'''
-    return f'''<article class="experience-item" id="{text(item["id"])}">
-        <p class="experience-date">{text(item["year"])}</p>
-        <div>
-          <div class="job-heading"><h3>{text(item["company"])}</h3><span class="location">{text(item["location"])}</span></div>
-          <p class="role">{text(item["role"])}</p>
-          <p class="job-summary">{text(item["summary"])}</p>{details}
-        </div>
-      </article>'''
+        row.extend(['  <details>', '    <summary>Technical details</summary>', '    <ul>'])
+        row.extend(f'      <li>{text(point)}</li>' for point in item["details"])
+        row.extend(['    </ul>', f'    <p>{text(item["stack"])}</p>', '  </details>'])
+    row.append('</article>')
+    return "\n".join(row)
 
 
 def earlier(item):
-    source = link(item["link"], item["linkLabel"], "thesis-link") if item.get("link") else ""
-    return f'''<article class="earlier-item" id="{text(item["id"])}">
-            <p class="experience-date">{text(item["year"])}</p>
-            <h3>{text(item["company"])}</h3>
-            <p>{text(item["summary"])}</p>
-            {source}
-          </article>'''
+    source = f'\n  <p>{link(item["link"], item["linkLabel"])}</p>' if item.get("link") else ""
+    return f'''<article id="{text(item["id"])}">
+  <h3>{text(item["company"])}</h3>
+  <p class="entry-meta">{text(item["year"])}</p>
+  <p>{text(item["summary"])}</p>{source}
+</article>'''
 
 
 def project(item):
@@ -53,40 +47,46 @@ def project(item):
     player = ""
     if sample:
         player = f'''
-          <figure class="voice-sample">
-            <figcaption>{text(sample["label"])}</figcaption>
-            <audio controls preload="metadata" aria-label="{text(sample["label"])}" src="{text(sample["file"])}"></audio>
-            <details><summary>Transcript</summary><p>{text(sample["transcript"])}</p></details>
-          </figure>'''
-    return f'''<article class="project{' with-sample' if sample else ''}" id="project-{text(item["id"])}">
-          <div class="project-copy">
-            <span class="project-category">{text(item["category"])}</span>
-            <h3>{text(item["name"])}</h3>
-            <p>{text(item["summary"])}</p>
-            {link(item["url"], item["linkLabel"])}
-          </div>{player}
-        </article>'''
+  <figure>
+    <figcaption>{text(sample["label"])}</figcaption>
+    <audio controls preload="metadata" aria-label="{text(sample["label"])}" src="{text(sample["file"])}"></audio>
+    <details>
+      <summary>Transcript</summary>
+      <p>{text(sample["transcript"])}</p>
+    </details>
+  </figure>'''
+    return f'''<article id="project-{text(item["id"])}">
+  <h3>{text(item["name"])}</h3>
+  <p class="entry-meta">{text(item["category"])}</p>
+  <p>{text(item["summary"])}</p>
+  <p>{link(item["url"], item["linkLabel"])}</p>{player}
+</article>'''
 
 
 def experiment(item):
     name = (link(item["url"], item["name"]) if item.get("url")
-            else f'<strong>{text(item["name"])}<span class="experiment-label">{text(item["category"])}</span></strong>')
-    return f'<li id="project-{text(item["id"])}"><div>{name}</div><p>{text(item["summary"])}</p></li>'
+            else f'<strong>{text(item["name"])}</strong> ({text(item["category"])})')
+    return f'<li id="project-{text(item["id"])}">{name} — {text(item["summary"])}</li>'
 
 
 def build():
     data = json.loads((ROOT / "data/timeline.json").read_text(encoding="utf-8"))
     sections = {
-        "EXPERIENCE": "\n      ".join(map(experience, data["milestones"])),
-        "EARLIER": "\n          ".join(map(earlier, data["earlier"])),
-        "PROJECTS": "\n        ".join(project(item) for item in data["projects"] if item["featured"]),
-        "EXPERIMENTS": "\n          ".join(experiment(item) for item in data["projects"] if not item["featured"]),
+        "EXPERIENCE": "\n".join(map(experience, data["milestones"])),
+        "EARLIER": "\n".join(map(earlier, data["earlier"])),
+        "PROJECTS": "\n".join(project(item) for item in data["projects"] if item["featured"]),
+        "EXPERIMENTS": "\n".join(experiment(item) for item in data["projects"] if not item["featured"]),
     }
     path = ROOT / "index.html"
     html = path.read_text(encoding="utf-8")
     for section, content in sections.items():
-        pattern = rf'(<!-- BEGIN {section} -->).*?(<!-- END {section} -->)'
-        html, count = re.subn(pattern, lambda match: f'{match[1]}\n      {content}\n      {match[2]}', html, flags=re.S)
+        pattern = rf'^([ \t]*)(<!-- BEGIN {section} -->)\n.*?^\1(<!-- END {section} -->)'
+        html, count = re.subn(
+            pattern,
+            lambda match: f'{match[1]}{match[2]}\n{indent(content, match[1])}\n{match[1]}{match[3]}',
+            html,
+            flags=re.M | re.S,
+        )
         if count != 1:
             raise ValueError(f"Expected one {section} region, found {count}")
     path.write_text(html, encoding="utf-8")

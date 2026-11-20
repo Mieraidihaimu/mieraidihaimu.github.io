@@ -10,196 +10,161 @@
   <meta property="og:title" content="Mieraidihaimu Mieraisan — Senior Software Engineer">
   <meta property="og:description" content="From native apps to distributed systems. Work, projects and a little background from Mieraidihaimu Mieraisan.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151718'/%3E%3Ctext x='13' y='46' font-family='Georgia' font-size='44' fill='%23dfb57c'%3Em%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/styles.css?v=2">
-  <script src="js/app.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#about" aria-label="Mier, back to introduction">mier<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" id="theme-toggle-btn" type="button" aria-label="Switch to dark theme" hidden>
-        <svg class="theme-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
-        <svg class="theme-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14A8.5 8.5 0 0 1 10 4a8.5 8.5 0 1 0 10 10Z"/></svg>
-      </button>
-    </div>
+  <header>
+    <nav class="links" aria-label="Main navigation">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <main id="main" class="container">
-    <section id="about" class="hero" aria-labelledby="intro-title">
-      <p class="eyebrow">Mieraidihaimu Mieraisan</p>
-      <h1 id="intro-title">From native apps<br>to <em>distributed systems.</em></h1>
-      <div class="intro">
-        <p>I’m Mier, a senior software engineer at Bloomberg in London. I started out building iOS apps. Today I work on the backend for Instant Bloomberg.</p>
-        <p>Outside work, I build <a href="#projects">tools for reading, coding and play</a>.</p>
-      </div>
-      <div class="intro-links">
-        <a class="primary-link" href="CV_Mier.pdf">Read my CV (PDF)</a>
+  <main id="main">
+    <section id="about" aria-labelledby="intro-title">
+      <h1 id="intro-title">Mieraidihaimu Mieraisan</h1>
+      <p>I’m Mier, a senior software engineer at Bloomberg in London. I started out building iOS apps. Today I work on the backend for Instant Bloomberg.</p>
+      <p>Outside work, I build <a href="#projects">tools for reading, coding and play</a>.</p>
+      <p class="links">
+        <a href="CV_Mier.pdf">Read my CV (PDF)</a>
         <a href="https://github.com/Mieraidihaimu">GitHub</a>
         <a href="https://www.linkedin.com/in/mier/">LinkedIn</a>
-      </div>
+      </p>
     </section>
-    <section id="experience" class="section" aria-labelledby="experience-title">
-      <div class="section-heading">
-        <h2 id="experience-title">Experience</h2>
-      </div>
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
       <!-- BEGIN EXPERIENCE -->
-      <article class="experience-item" id="bloomberg-core">
-        <p class="experience-date">2023–present</p>
-        <div>
-          <div class="job-heading"><h3>Bloomberg</h3><span class="location">London</span></div>
-          <p class="role">Senior Software Engineer</p>
-          <p class="job-summary">I tuned the Python Kafka consumers behind Instant Bloomberg. Batching messages and changing how we encode and compress them cut message latency by 40% and increased throughput by 25%.</p>
-          <details class="technical-details">
+      <article id="bloomberg-core">
+        <h3>Bloomberg</h3>
+        <p class="entry-meta">Senior Software Engineer · London · 2023–present</p>
+        <p>I tuned the Python Kafka consumers behind Instant Bloomberg. Batching messages and changing how we encode and compress them cut message latency by 40% and increased throughput by 25%.</p>
+        <details>
           <summary>Technical details</summary>
-          <ul><li>The messaging infrastructure supports more than 200,000 daily active mobile users and achieved 99.99% uptime.</li><li>Built a service to keep user events in sync with Redis and distributed messaging. Also built audio messaging APIs that support compliance intervention.</li><li>Led the migration from physical to virtual clusters to improve deployment and scaling.</li></ul>
-          <p class="stack">Python · Kafka · Redis · CPython</p>
+          <ul>
+            <li>The messaging infrastructure supports more than 200,000 daily active mobile users and achieved 99.99% uptime.</li>
+            <li>Built a service to keep user events in sync with Redis and distributed messaging. Also built audio messaging APIs that support compliance intervention.</li>
+            <li>Led the migration from physical to virtual clusters to improve deployment and scaling.</li>
+          </ul>
+          <p>Python · Kafka · Redis · CPython</p>
         </details>
-        </div>
       </article>
-      <article class="experience-item" id="cookpad-evolution">
-        <p class="experience-date">2019–2023</p>
-        <div>
-          <div class="job-heading"><h3>Cookpad</h3><span class="location">Bristol</span></div>
-          <p class="role">Senior Software Engineer</p>
-          <p class="job-summary">I led iOS development for Cookpad’s recipe-sharing app. In my final year I moved to backend and data engineering, building event pipelines and streaming generated recipes to mobile clients.</p>
-          <details class="technical-details">
+      <article id="cookpad-evolution">
+        <h3>Cookpad</h3>
+        <p class="entry-meta">Senior Software Engineer · Bristol · 2019–2023</p>
+        <p>I led iOS development for Cookpad’s recipe-sharing app. In my final year I moved to backend and data engineering, building event pipelines and streaming generated recipes to mobile clients.</p>
+        <details>
           <summary>Technical details</summary>
-          <ul><li>Mentored four developers on API use and client-server design.</li><li>Built cross-platform event ingestion and enrichment with Snowplow, dbt and Redshift.</li><li>Used Flask and Server-Sent Events so readers could see each part of a recipe as it arrived.</li></ul>
-          <p class="stack">Swift · Python · Flask · Snowplow · dbt · Redshift</p>
+          <ul>
+            <li>Mentored four developers on API use and client-server design.</li>
+            <li>Built cross-platform event ingestion and enrichment with Snowplow, dbt and Redshift.</li>
+            <li>Used Flask and Server-Sent Events so readers could see each part of a recipe as it arrived.</li>
+          </ul>
+          <p>Swift · Python · Flask · Snowplow · dbt · Redshift</p>
         </details>
-        </div>
       </article>
-      <article class="experience-item" id="farfetch-gateway">
-        <p class="experience-date">2018–2019</p>
-        <div>
-          <div class="job-heading"><h3>Farfetch</h3><span class="location">Shanghai</span></div>
-          <p class="role">Senior Software Engineer</p>
-          <p class="job-summary">I helped design the API gateway and data localization strategy for Farfetch in China. The infrastructure changes reduced API and CDN timeouts by 65%.</p>
-        </div>
+      <article id="farfetch-gateway">
+        <h3>Farfetch</h3>
+        <p class="entry-meta">Senior Software Engineer · Shanghai · 2018–2019</p>
+        <p>I helped design the API gateway and data localization strategy for Farfetch in China. The infrastructure changes reduced API and CDN timeouts by 65%.</p>
       </article>
-      <article class="experience-item" id="pingan-shanghai">
-        <p class="experience-date">2015–2018</p>
-        <div>
-          <div class="job-heading"><h3>Ping An Group</h3><span class="location">Shanghai</span></div>
-          <p class="role">Senior iOS Engineer</p>
-          <p class="job-summary">I built iOS apps for financial services in China, working within the group’s compliance requirements.</p>
-        </div>
+      <article id="pingan-shanghai">
+        <h3>Ping An Group</h3>
+        <p class="entry-meta">Senior iOS Engineer · Shanghai · 2015–2018</p>
+        <p>I built iOS apps for financial services in China, working within the group’s compliance requirements.</p>
       </article>
       <!-- END EXPERIENCE -->
-      <details class="earlier-work">
-        <summary>Earlier work &amp; education <span aria-hidden="true">+</span></summary>
-        <div class="earlier-content">
-          <!-- BEGIN EARLIER -->
-      <article class="earlier-item" id="finland-early-career">
-            <p class="experience-date">2013–2015</p>
-            <h3>Early work in Finland</h3>
-            <p>Software Engineer at SIQ Basketball (Helsinki, Jan–Jun 2013) and Jerone Group Oy (Tampere, Nov 2013–Feb 2014), followed by iOS Developer at Nintu Oy (Helsinki, Feb 2014–Aug 2015).</p>
-            
-          </article>
-          <article class="earlier-item" id="masters-thesis">
-            <p class="experience-date">2013</p>
-            <h3>M.Sc. Information Technology · Tampere University of Technology</h3>
-            <p>My thesis explored basketball video analysis using modified SURF for court detection and compressive tracking for individual players. It was an early lesson in working with noisy inputs and limited compute—ideas I still find useful in systems work.</p>
-            <a href="https://trepo.tuni.fi/handle/123456789/21916" class="thesis-link">Read the thesis</a>
-          </article>
-          <article class="earlier-item" id="bachelors-opt">
-            <p class="experience-date">2006–2010</p>
-            <h3>B.Sc. Information Technology · HUST</h3>
-            <p>Studied at Huazhong University of Science and Technology in Wuhan, with work on multi-objective optimization and Pareto trade-offs.</p>
-            
-          </article>
-      <!-- END EARLIER -->
-        </div>
+      <details>
+        <summary>Earlier work &amp; education</summary>
+        <!-- BEGIN EARLIER -->
+        <article id="finland-early-career">
+          <h3>Early work in Finland</h3>
+          <p class="entry-meta">2013–2015</p>
+          <p>Software Engineer at SIQ Basketball (Helsinki, Jan–Jun 2013) and Jerone Group Oy (Tampere, Nov 2013–Feb 2014), followed by iOS Developer at Nintu Oy (Helsinki, Feb 2014–Aug 2015).</p>
+        </article>
+        <article id="masters-thesis">
+          <h3>M.Sc. Information Technology · Tampere University of Technology</h3>
+          <p class="entry-meta">2013</p>
+          <p>My thesis explored basketball video analysis using modified SURF for court detection and compressive tracking for individual players. It was an early lesson in working with noisy inputs and limited compute—ideas I still find useful in systems work.</p>
+          <p><a href="https://trepo.tuni.fi/handle/123456789/21916">Read the thesis</a></p>
+        </article>
+        <article id="bachelors-opt">
+          <h3>B.Sc. Information Technology · HUST</h3>
+          <p class="entry-meta">2006–2010</p>
+          <p>Studied at Huazhong University of Science and Technology in Wuhan, with work on multi-objective optimization and Pareto trade-offs.</p>
+        </article>
+        <!-- END EARLIER -->
       </details>
     </section>
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <h2 id="projects-title">Selected projects</h2>
-      </div>
-      <div class="projects-grid">
-        <!-- BEGIN PROJECTS -->
-      <article class="project with-sample" id="project-pagehum">
-          <div class="project-copy">
-            <span class="project-category">macOS &amp; iOS</span>
-            <h3>Pagehum</h3>
-            <p>Listen to articles and PDFs with speech generated on your Mac or iPhone. Pagehum uses Kokoro and Apple MLX, and its Mac command-line tool exports the narration as audio.</p>
-            <a href="https://github.com/Mieraidihaimu/pagehum">Pagehum source and setup</a>
-          </div>
-          <figure class="voice-sample">
-            <figcaption>Listen to Pagehum</figcaption>
-            <audio controls preload="metadata" aria-label="Listen to Pagehum" src="assets/pagehum-sample.m4a"></audio>
-            <details><summary>Transcript</summary><p>Your reading list, read aloud. Welcome to Pagehum.</p></details>
-          </figure>
-        </article>
-        <article class="project" id="project-typingpall">
-          <div class="project-copy">
-            <span class="project-category">macOS &amp; iPadOS</span>
-            <h3>TypingPall</h3>
-            <p>Choose a code pattern, hide a line, and write it from memory. TypingPall checks each line as you go and keeps your practice library on your device.</p>
-            <a href="https://github.com/Mieraidihaimu/TypingPall">TypingPall source and setup</a>
-          </div>
-        </article>
-        <article class="project" id="project-audio-capture">
-          <div class="project-copy">
-            <span class="project-category">macOS</span>
-            <h3>Audio Capture</h3>
-            <p>Record audio from a Mac app or your entire system, with the option to save your microphone as a separate track. The menu bar app uses WhisperKit for offline transcription and dictation.</p>
-            <a href="https://github.com/Mieraidihaimu/audio-capture">Audio Capture source and setup</a>
-          </div>
-        </article>
-        <article class="project" id="project-vocal-coach">
-          <div class="project-copy">
-            <span class="project-category">macOS</span>
-            <h3>Vocal Coach</h3>
-            <p>Practise British English vowels with a prompt of your choice. Hear the prompt in Pagehum’s Emma voice, record yourself, and compare takes with pitch traces and feedback on individual words.</p>
-            <a href="https://github.com/Mieraidihaimu/VocalCoach#vocal-coach">Vocal Coach source and setup</a>
-          </div>
-        </article>
-        <article class="project" id="project-teachably">
-          <div class="project-copy">
-            <span class="project-category">iOS</span>
-            <h3>Teachably</h3>
-            <p>An iPhone app that suggests daily activities for parents and children based on the family’s interests. Each activity gives younger children a way to join in and older siblings a role in leading it.</p>
-            <a href="https://github.com/Mieraidihaimu/Teachably">Teachably source and setup</a>
-          </div>
-        </article>
-        <article class="project" id="project-turkic-grid-games">
-          <div class="project-copy">
-            <span class="project-category">Web</span>
-            <h3>Türkic Grid Games</h3>
-            <p>Play Bağ or Qyrq Qyz, two Central Asian strategy games. Play solo, share one screen, or invite a friend to a peer-to-peer match.</p>
-            <a href="https://turkic-grid-games.svmwb88w56-8b2.workers.dev/">Play the games</a>
-          </div>
-        </article>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected projects</h2>
+      <!-- BEGIN PROJECTS -->
+      <article id="project-pagehum">
+        <h3>Pagehum</h3>
+        <p class="entry-meta">macOS &amp; iOS</p>
+        <p>Listen to articles and PDFs with speech generated on your Mac or iPhone. Pagehum uses Kokoro and Apple MLX, and its Mac command-line tool exports the narration as audio.</p>
+        <p><a href="https://github.com/Mieraidihaimu/pagehum">Pagehum source and setup</a></p>
+        <figure>
+          <figcaption>Listen to Pagehum</figcaption>
+          <audio controls preload="metadata" aria-label="Listen to Pagehum" src="assets/pagehum-sample.m4a"></audio>
+          <details>
+            <summary>Transcript</summary>
+            <p>Your reading list, read aloud. Welcome to Pagehum.</p>
+          </details>
+        </figure>
+      </article>
+      <article id="project-typingpall">
+        <h3>TypingPall</h3>
+        <p class="entry-meta">macOS &amp; iPadOS</p>
+        <p>Choose a code pattern, hide a line, and write it from memory. TypingPall checks each line as you go and keeps your practice library on your device.</p>
+        <p><a href="https://github.com/Mieraidihaimu/TypingPall">TypingPall source and setup</a></p>
+      </article>
+      <article id="project-audio-capture">
+        <h3>Audio Capture</h3>
+        <p class="entry-meta">macOS</p>
+        <p>Record audio from a Mac app or your entire system, with the option to save your microphone as a separate track. The menu bar app uses WhisperKit for offline transcription and dictation.</p>
+        <p><a href="https://github.com/Mieraidihaimu/audio-capture">Audio Capture source and setup</a></p>
+      </article>
+      <article id="project-vocal-coach">
+        <h3>Vocal Coach</h3>
+        <p class="entry-meta">macOS</p>
+        <p>Practise British English vowels with a prompt of your choice. Hear the prompt in Pagehum’s Emma voice, record yourself, and compare takes with pitch traces and feedback on individual words.</p>
+        <p><a href="https://github.com/Mieraidihaimu/VocalCoach#vocal-coach">Vocal Coach source and setup</a></p>
+      </article>
+      <article id="project-teachably">
+        <h3>Teachably</h3>
+        <p class="entry-meta">iOS</p>
+        <p>An iPhone app that suggests daily activities for parents and children based on the family’s interests. Each activity gives younger children a way to join in and older siblings a role in leading it.</p>
+        <p><a href="https://github.com/Mieraidihaimu/Teachably">Teachably source and setup</a></p>
+      </article>
+      <article id="project-turkic-grid-games">
+        <h3>Türkic Grid Games</h3>
+        <p class="entry-meta">Web</p>
+        <p>Play Bağ or Qyrq Qyz, two Central Asian strategy games. Play solo, share one screen, or invite a friend to a peer-to-peer match.</p>
+        <p><a href="https://turkic-grid-games.svmwb88w56-8b2.workers.dev/">Play the games</a></p>
+      </article>
       <!-- END PROJECTS -->
-      </div>
-      <details class="more-projects">
-        <summary>A few more experiments <span aria-hidden="true">+</span></summary>
-        <ul class="experiment-list">
+      <details>
+        <summary>A few more experiments</summary>
+        <ul class="experiments">
           <!-- BEGIN EXPERIMENTS -->
-      <li id="project-llm-monitor"><div><strong>llm_monitor_daemon<span class="experiment-label">Local tool</span></strong></div><p>A C99/POSIX daemon that indexes local coding-agent session logs in SQLite.</p></li>
-          <li id="project-pomodoro-menubar"><div><strong>Pomodoro Menubar<span class="experiment-label">Local tool</span></strong></div><p>A small Swift timer that lives in the macOS menu bar and uses system notifications.</p></li>
-          <li id="project-wander-explorer"><div><a href="https://wander-knowledge-explorer.svmwb88w56-8b2.workers.dev/">Wander</a></div><p>A canvas for exploring connected ideas, backed by Cloudflare Workers and D1.</p></li>
-          <li id="project-home-model"><div><a href="https://home-model.svmwb88w56-8b2.workers.dev/">Home Model</a></div><p>Floor plans and furniture layout experiments built with YAML, Workers AI and D1. Sign-in required.</p></li>
-          <li id="project-til-feed"><div><a href="https://til-mier.svmwb88w56-8b2.workers.dev/">Today I Learned</a></div><p>A personal knowledge feed with a web app and CLI, running on Cloudflare Workers and D1.</p></li>
-      <!-- END EXPERIMENTS -->
+          <li id="project-llm-monitor"><strong>llm_monitor_daemon</strong> (Local tool) — A C99/POSIX daemon that indexes local coding-agent session logs in SQLite.</li>
+          <li id="project-pomodoro-menubar"><strong>Pomodoro Menubar</strong> (Local tool) — A small Swift timer that lives in the macOS menu bar and uses system notifications.</li>
+          <li id="project-wander-explorer"><a href="https://wander-knowledge-explorer.svmwb88w56-8b2.workers.dev/">Wander</a> — A canvas for exploring connected ideas, backed by Cloudflare Workers and D1.</li>
+          <li id="project-home-model"><a href="https://home-model.svmwb88w56-8b2.workers.dev/">Home Model</a> — Floor plans and furniture layout experiments built with YAML, Workers AI and D1. Sign-in required.</li>
+          <li id="project-til-feed"><a href="https://til-mier.svmwb88w56-8b2.workers.dev/">Today I Learned</a> — A personal knowledge feed with a web app and CLI, running on Cloudflare Workers and D1.</li>
+          <!-- END EXPERIMENTS -->
         </ul>
       </details>
     </section>
-    <section id="contact" class="contact section" aria-labelledby="contact-title">
-      <h2 id="contact-title">Say hello.</h2>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
       <p>Happy to talk about systems, native software, or something you’re building.</p>
-      <a class="email-link" href="mailto:mieraisan@gmail.com">mieraisan@gmail.com</a>
+      <p><a href="mailto:mieraisan@gmail.com">mieraisan@gmail.com</a></p>
     </section>
   </main>
-  <footer class="container site-footer">
-    <span>© 2026 Mieraidihaimu Mieraisan</span>
+  <footer>
+    <p>© 2026 Mieraidihaimu Mieraisan</p>
     <a href="#top">Back to top</a>
   </footer>
 </body>

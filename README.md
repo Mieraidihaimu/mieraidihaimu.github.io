@@ -12,6 +12,6 @@ Experience and project content lives in `data/timeline.json`. After changing it,
 python3 scripts/build.py
 ```
 
-The generator updates only the marked regions in `index.html`. Edit its introduction, navigation, contact and metadata directly. Styles live in `css/styles.css`; `js/app.js` only manages the saved light/dark preference.
+The generator updates only the marked regions in `index.html`. Edit its introduction, navigation, contact and metadata directly. Layout and spacing live in `css/styles.css`.
 
-Deploy `index.html`, `css/`, `js/`, `assets/` and `CV_Mier.pdf` to any static host. No build service, package installation or network access is required to use the site. The local voice sample comes from the [Pagehum v0.1.0 release](https://github.com/Mieraidihaimu/pagehum/releases/tag/v0.1.0). Keep the JSON and generator in source control for future edits.
+Deploy `index.html`, `css/`, `assets/` and `CV_Mier.pdf` to any static host. The site uses static HTML and CSS. The local voice sample comes from the [Pagehum v0.1.0 release](https://github.com/Mieraidihaimu/pagehum/releases/tag/v0.1.0). Keep the JSON and generator in source control for future edits.

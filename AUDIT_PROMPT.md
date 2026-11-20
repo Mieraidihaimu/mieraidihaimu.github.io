@@ -9,7 +9,7 @@ Review this static portfolio for accuracy, clarity and usability. Give specific 
 - `scripts/build.py`: generates the marked HTML regions from the JSON.
 - `CV_Mier.pdf`: self-reported career history, not independent verification of results.
 - `NARRATIVE_PLAN.md`: current editorial decisions.
-- `css/styles.css` and `js/app.js`: layout and theme preference.
+- `css/styles.css` sets layout and spacing.
 - [Trepo thesis record](https://trepo.tuni.fi/handle/123456789/21916).
 - Public project repositories and live links named in the page. For local-only projects, report the evidence available without assuming a public release exists.
 
@@ -29,7 +29,7 @@ Can a visitor quickly find the current role, previous work, featured projects, C
 
 ## Implementation
 
-Run `python3 scripts/build.py` and check reproducibility. Content should already be present in HTML, with no content fetch or fallback object. Check local assets and anchors, semantic headings, keyboard focus, native disclosures and both themes. Inspect narrow phone and desktop layouts for overflow and unreadable text. Verify direct file use and disabled JavaScript when the browser supports it; state any verification limits explicitly.
+Run `python3 scripts/build.py` and check reproducibility. Content should already be present in HTML, with no content fetch or fallback object. Check local assets and anchors, semantic headings, keyboard focus, native disclosures and browser light and dark appearances. Inspect narrow phone and desktop layouts for overflow and unreadable text. Verify direct file use and disabled JavaScript when the browser supports it. State any verification limits explicitly.
 
 ## Report
 
