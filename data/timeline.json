@@ -6,10 +6,10 @@
       "company": "Bloomberg",
       "role": "Senior Software Engineer",
       "location": "London",
-      "summary": "I work on Instant Bloomberg’s messaging backend. Changes to Python Kafka consumers reduced message latency by 40% and improved throughput by 25% through batching, encoding and compression.",
+      "summary": "I tuned the Python Kafka consumers behind Instant Bloomberg. Batching messages and changing how we encode and compress them cut message latency by 40% and increased throughput by 25%.",
       "details": [
-        "Developed backend features for infrastructure supporting 200,000+ mobile daily active users with 99.99% uptime.",
-        "Built real-time user event synchronization with Redis and distributed messaging, and audio messaging APIs with compliance intervention.",
+        "The messaging infrastructure supports more than 200,000 daily active mobile users and achieved 99.99% uptime.",
+        "Built a service to keep user events in sync with Redis and distributed messaging. Also built audio messaging APIs that support compliance intervention.",
         "Led the migration from physical to virtual clusters to improve deployment and scaling."
       ],
       "stack": "Python · Kafka · Redis · CPython"
@@ -20,11 +20,11 @@
       "company": "Cookpad",
       "role": "Senior Software Engineer",
       "location": "Bristol",
-      "summary": "Led iOS development, then moved into backend and data engineering in my final year. Built event pipelines and a recipe creation service that streamed responses to mobile clients.",
+      "summary": "I led iOS development for Cookpad’s recipe-sharing app. In my final year I moved to backend and data engineering, building event pipelines and streaming generated recipes to mobile clients.",
       "details": [
-        "Worked on the iOS app for a recipe-sharing platform with a global audience; mentored four developers on APIs and client-server design.",
+        "Mentored four developers on API use and client-server design.",
         "Built cross-platform event ingestion and enrichment with Snowplow, dbt and Redshift.",
-        "Used Python, Flask and Server-Sent Events to display generated recipe content as it arrived, rather than waiting for a complete response."
+        "Used Flask and Server-Sent Events so readers could see each part of a recipe as it arrived."
       ],
       "stack": "Swift · Python · Flask · Snowplow · dbt · Redshift"
     },
@@ -34,11 +34,8 @@
       "company": "Farfetch",
       "role": "Senior Software Engineer",
       "location": "Shanghai",
-      "summary": "Co-architected the API gateway and data localization strategy for the China market, reducing API and CDN timeout issues by 65% through infrastructure changes.",
-      "details": [
-        "Focused on the reliability of requests between clients in China and Farfetch’s services.",
-        "Worked across gateway routing and data localization to reduce cross-border network problems."
-      ],
+      "summary": "I helped design the API gateway and data localization strategy for Farfetch in China. The infrastructure changes reduced API and CDN timeouts by 65%.",
+      "details": [],
       "stack": "API gateways · Data localization · CDN"
     },
     {
@@ -47,7 +44,7 @@
       "company": "Ping An Group",
       "role": "Senior iOS Engineer",
       "location": "Shanghai",
-      "summary": "Built iOS applications for financial services, working within regulated systems and compliance requirements.",
+      "summary": "I built iOS apps for financial services in China, working within the group’s compliance requirements.",
       "details": [],
       "stack": "iOS · Financial services"
     }
@@ -80,25 +77,30 @@
       "name": "Pagehum",
       "featured": true,
       "category": "macOS & iOS",
-      "summary": "A reading app that turns saved articles into speech on your device. Built with SwiftUI, Kokoro and Apple MLX, with a Mac CLI for audio export.",
+      "summary": "Listen to articles and PDFs with speech generated on your Mac or iPhone. Pagehum uses Kokoro and Apple MLX, and its Mac command-line tool exports the narration as audio.",
       "url": "https://github.com/Mieraidihaimu/pagehum",
-      "linkLabel": "Source & setup"
+      "linkLabel": "Pagehum source and setup",
+      "sample": {
+        "file": "assets/pagehum-sample.m4a",
+        "label": "Listen to Pagehum",
+        "transcript": "Your reading list, read aloud. Welcome to Pagehum."
+      }
     },
     {
       "id": "typingpall",
       "name": "TypingPall",
       "featured": true,
-      "category": "macOS",
-      "summary": "Practice algorithms and code patterns one line at a time. A native, offline app with recall drills, a local practice library and no accounts or analytics.",
+      "category": "macOS & iPadOS",
+      "summary": "Choose a code pattern, hide a line, and write it from memory. TypingPall checks each line as you go and keeps your practice library on your device.",
       "url": "https://github.com/Mieraidihaimu/TypingPall",
-      "linkLabel": "Source & build instructions"
+      "linkLabel": "TypingPall source and setup"
     },
     {
       "id": "turkic-grid-games",
       "name": "Türkic Grid Games",
       "featured": true,
       "category": "Web",
-      "summary": "Bağ and Qyrq Qyz, two Central Asian strategy games, with solo play, WebRTC multiplayer and procedural instrument sounds from the Web Audio API.",
+      "summary": "Play Bağ or Qyrq Qyz, two Central Asian strategy games. Play solo, share one screen, or invite a friend to a peer-to-peer match.",
       "url": "https://turkic-grid-games.svmwb88w56-8b2.workers.dev/",
       "linkLabel": "Play the games"
     },
@@ -127,7 +129,7 @@
       "id": "home-model",
       "name": "Home Model",
       "featured": false,
-      "summary": "Machine-readable floor plans and furniture layout experiments with YAML, Workers AI and D1.",
+      "summary": "Floor plans and furniture layout experiments built with YAML, Workers AI and D1. Sign-in required.",
       "url": "https://home-model.svmwb88w56-8b2.workers.dev/"
     },
     {

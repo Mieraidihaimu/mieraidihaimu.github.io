@@ -14,15 +14,16 @@ def text(value):
 def link(url, label, class_name=""):
     if not url.startswith("https://"):
         raise ValueError(f"Expected an HTTPS project or thesis URL: {url}")
-    return (f'<a href="{text(url)}" class="{class_name}" target="_blank" '
-            f'rel="noopener noreferrer">{text(label)} <span aria-hidden="true">↗</span></a>')
+    style = f' class="{text(class_name)}"' if class_name else ""
+    return f'<a href="{text(url)}"{style}>{text(label)}</a>'
 
 
 def experience(item):
     details = ""
     if item["details"]:
         points = "".join(f'<li>{text(point)}</li>' for point in item["details"])
-        details = f'''<details class="technical-details">
+        details = f'''
+          <details class="technical-details">
           <summary>Technical details</summary>
           <ul>{points}</ul>
           <p class="stack">{text(item["stack"])}</p>
@@ -32,8 +33,7 @@ def experience(item):
         <div>
           <div class="job-heading"><h3>{text(item["company"])}</h3><span class="location">{text(item["location"])}</span></div>
           <p class="role">{text(item["role"])}</p>
-          <p class="job-summary">{text(item["summary"])}</p>
-          {details}
+          <p class="job-summary">{text(item["summary"])}</p>{details}
         </div>
       </article>'''
 
@@ -49,11 +49,22 @@ def earlier(item):
 
 
 def project(item):
-    return f'''<article class="project" id="project-{text(item["id"])}">
-          <span class="project-category">{text(item["category"])}</span>
-          <h3>{text(item["name"])}</h3>
-          <p>{text(item["summary"])}</p>
-          {link(item["url"], item["linkLabel"])}
+    sample = item.get("sample")
+    player = ""
+    if sample:
+        player = f'''
+          <figure class="voice-sample">
+            <figcaption>{text(sample["label"])}</figcaption>
+            <audio controls preload="metadata" aria-label="{text(sample["label"])}" src="{text(sample["file"])}"></audio>
+            <details><summary>Transcript</summary><p>{text(sample["transcript"])}</p></details>
+          </figure>'''
+    return f'''<article class="project{' with-sample' if sample else ''}" id="project-{text(item["id"])}">
+          <div class="project-copy">
+            <span class="project-category">{text(item["category"])}</span>
+            <h3>{text(item["name"])}</h3>
+            <p>{text(item["summary"])}</p>
+            {link(item["url"], item["linkLabel"])}
+          </div>{player}
         </article>'''
 
 
